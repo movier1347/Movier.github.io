@@ -8,8 +8,8 @@ const MovieCard = (props) => {
   const [name, setName] = useState("");
 
 
-  function handleClick(title){
-    props.addTask(title);
+  function handleClick(title, poster){
+    props.addTask(title, poster);
     console.log("You clicked " + title);
   }
 
@@ -17,7 +17,7 @@ const MovieCard = (props) => {
     <div className="movie">
       <div className="AddToWatch">
         <p>{props.movie.Year}</p>
-        <h3 onClick={() => handleClick(props.movie.Title)}
+        <h3 onClick={() => handleClick(props.movie.Title, props.movie.Poster)}
         >Add</h3>
       </div>
       

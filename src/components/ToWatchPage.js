@@ -72,13 +72,7 @@ function ToWatchPage(props) {
     return props.setTasks([]);
   }
 
-  let myTimer = setInterval(printTaks, 3000);
 
-  function printTaks(){
-    for(let i = 0; i < props.tasks.length; i++){
-      console.log(props.tasks);
-    }
-  }
 
   function toggleTaskCompleted(id) {
     const updatedTasks = props.tasks.map((task) => {
@@ -122,6 +116,7 @@ function ToWatchPage(props) {
       name={task.name}
       completed={task.completed}
       key={task.id}
+      poster={task.moviePoster}
       toggleTaskCompleted={toggleTaskCompleted}
       deleteTask={deleteTask}
       editTask={editTask}
@@ -164,13 +159,10 @@ function ToWatchPage(props) {
         setDarkMode={setDarkMode}
         className="mode-btn"
       />
-      <Form addTask={props.addTask} />
-      <button className="clearAllBtn" onClick={clearAll}>
-        Clear All Movies
-      </button>
+      
       <div className="filters btn-group stack-exception">{filterList}</div>
       <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
-        {headingText}
+        {}
       </h2>
       <ul
         role="list"
@@ -181,6 +173,9 @@ function ToWatchPage(props) {
         taskList
         }
       </ul>
+      <button className="clearAllBtn" onClick={clearAll}>
+        Clear All Movies
+      </button>
     </div>
   );
 }

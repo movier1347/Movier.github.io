@@ -98,9 +98,25 @@ function Todo(props) {
       </div>
     </form>
   );
+
+  const styleImgSmallStack = {
+    backgroundImage: `url(${props.poster}`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "18%",
+    
+  }
+  const styleImgSmallStackCom = {
+    backgroundImage: `url(${props.poster}`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "18%",
+    border: "2px solid rgb(138, 255, 134)"
+    
+  }
   // the default mode for viewing the Home
   const viewTemplate = (
-    <div className="stack-small">
+    <div className="stack-small" style={ !props.completed?
+      styleImgSmallStack:styleImgSmallStackCom
+      }>
       <div className="c-cb">
         <input
           id={props.id}
@@ -108,44 +124,29 @@ function Todo(props) {
           //default of completed task
           defaultChecked={props.completed}
           //changes completed by calling the toggleTaskCompleted and passing in the id to complete
-          onChange={() => props.toggleTaskCompleted(props.id)}
+          onChange={() => {
+            props.toggleTaskCompleted(props.id)
+            setIsImortantClicked(!isImortantClicked)
+          }}
         />
         <label
           // the following code changes the checkbox to red if Important checkbox is clicked. The className is a JS function {}
           // code to change the className by using a terenary operator and isImportantClicked hook... if isImportantClicked is true set className to "todo-label important-red", else false set className to "todo-label"
           className={
-            isImortantClicked ? "todo-label important-red" : "todo-label"
+            props.completed ? "todo-label important-red" : "todo-label"
           }
           htmlFor={props.id}
         >
-          {props.name}
-        </label>
+          {props.name}</label>
       </div>
-      <div className="btn-group">
-        <button
-          type="button"
-          className="btn"
-          //sets the editing mode (setEditing) to be true
-          onClick={() => setEditing(true)}
-          ref={editButtonRef}
-        >
-          Edit <span className="visually-hidden">{props.name}</span>
-        </button>
+      <div className="btn-group1">
         <button
           type="button"
           className="btn btn__danger"
           //deletes the task by calling the deleteTask (Home.js line 50) by passing in the id
           onClick={() => props.deleteTask(props.id)}
-        >
-          Delete <span className="visually-hidden">{props.name}</span>
-        </button>
-        <button
-          type="button"
-          className="btn"
-          //when imporntant button is clicked it uses an anomynous function and calls the setIsImortantClicked hoook funtion and passes inverted boolean (!isImortantClicked)
-          onClick={() => setIsImortantClicked(!isImortantClicked)}
-        >
-          Priority <span className="visually-hidden">{props.name}</span>
+        > 
+          Delete<span className="visually-hidden">{props.name}</span>
         </button>
       </div>
     </div>

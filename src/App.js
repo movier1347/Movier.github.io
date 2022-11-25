@@ -12,8 +12,8 @@ function App(props) {
   const [toWatch, setToWatch] = useState([]);
 
 
-  function addTask(name) {
-    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
+  function addTask(name, moviePoster) {
+    const newTask = { id: `todo-${nanoid()}`, name, completed: false, moviePoster };
     let newArrTask = [];
     for(let i = 0; i < tasks.length; i++){
       newArrTask.push(tasks[i]);

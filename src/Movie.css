@@ -137,6 +137,20 @@ body {
   flex-wrap: wrap;
 }
 
+.container-abt{
+  width: 100%;
+  max-width: 120rem;
+  margin-top: 3rem;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #f0f0f0;
+}
+
 .movie {
   width: 310px;
   height: 460px;

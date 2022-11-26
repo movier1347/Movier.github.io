@@ -3,9 +3,10 @@ import React from "react";
 function About(props) {
   return (
     <>
+    <div className="container-abt">
+
       <h1 className="about-page-h1">The MOVIER</h1>
 
-      <h3>How to:</h3>
       <ol className="ol-how-to">
         <li>Search for Movies</li>
         <p>
@@ -29,6 +30,7 @@ function About(props) {
         </p>
       </ol>
       <p className="about-page-p"></p>
+    </div>
     </>
   );
 }

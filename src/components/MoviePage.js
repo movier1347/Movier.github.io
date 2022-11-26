@@ -56,10 +56,7 @@ const MoviePage = (props) => {
                    alt = "search"
                    onClick={()=>
                     searchMovies(searchTerm)
-                }
-                
-                
-                   
+                }   
                 />
             </div>
 

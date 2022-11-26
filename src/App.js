@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import ToWatchPage from "./components/ToWatchPage";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import logIn from "./components/logIn";
 import Error from "./components/Error";
 import { nanoid } from "nanoid";
 import jwt_decode from "jwt-decode";
@@ -18,7 +17,7 @@ function App(props) {
     //console.log("encoded jwt id toekn" + response.credential);
     let userObject = jwt_decode(response.credential);
     setuser(userObject);
-    console.log(userObject);
+    //console.log(userObject);
     document.getElementById("signInDiv").style.display = "none";
     document.getElementById("outButton").style.display = "flex";
     document.getElementById("outButton").style.visibility = "visible";

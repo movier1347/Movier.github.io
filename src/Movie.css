@@ -18,6 +18,7 @@
 body {
   font-family: var(--font-roboto);
   background-color: #212426;
+  min-width: 80%;
 }
 
 .app {
@@ -124,6 +125,8 @@ body {
 .container {
   width: 100%;
   margin-top: 3rem;
+  padding-left: 10%;
+  padding-right: 10%;
 
   display: flex;
   justify-content: center;

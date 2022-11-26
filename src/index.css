@@ -450,9 +450,42 @@ input:checked + .slider:before {
   margin-right: auto;
   display: grid;
   grid-column-start: 1;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
+}
+.inOutButton{
+  display: grid;
+}
+#signInDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#signOutDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inImg{
+  height: 4.5rem;
+  margin-right: 1rem ;
+}
+.prof{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #d3d3d3;
+}
+#outButton{
+  display: none;
+  color: #c1c1c1;
+
+}
+
+#outButton:hover{
+  color: #ffab67;
+  animation-duration: .3s;
 }
 .navbar-title a{ 
   margin-left: auto;

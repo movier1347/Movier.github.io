@@ -478,7 +478,7 @@ input:checked + .slider:before {
   color: #d3d3d3;
 }
 #outButton{
-  display: none;
+  visibility: hidden;
   color: #c1c1c1;
 
 }

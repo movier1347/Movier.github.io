@@ -21,6 +21,7 @@ function App(props) {
     console.log(userObject);
     document.getElementById("signInDiv").style.display = "none";
     document.getElementById("outButton").style.display = "flex";
+    document.getElementById("outButton").style.visibility = "visible";
     document.getElementById("outButton").style.justifyContent = "right";
   }
   //global google
@@ -39,7 +40,7 @@ function App(props) {
         text: "signin_with"
       }
       )
-  }, [])
+    }, [])
   
   
   function addTask(name, moviePoster) {
@@ -56,6 +57,7 @@ function App(props) {
   function handleSignOut(event){
     setuser({});
     document.getElementById("signInDiv").style.display = "flex";
+    document.getElementById("outButton").style.visibility = "hidden";
   }
 
   //tasks on parent so that we can add a movie from 

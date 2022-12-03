@@ -208,12 +208,15 @@ body {
   margin-bottom: 0;
 }
 .stack-small {
+  width: 65vw;
+  max-width: 40rem;
   display: grid;
   grid-template-columns: 4fr 2fr;
   padding: 2rem;
   margin-top: 1.25rem;
   border: 3px solid white;
   border-radius: 20px;
+  scale: 1.2;
 
 }
 

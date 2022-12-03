@@ -7,6 +7,7 @@ import Error from "./components/Error";
 import { nanoid } from "nanoid";
 import jwt_decode from "jwt-decode";
 import MoviePage from "./components/MoviePage";
+import Review from "./components/Review";
 
 function App(props) {
   const [tasks, setTasks] = useState([]);
@@ -74,6 +75,7 @@ function App(props) {
           <MoviePage tasks={tasks} setTasks={setTasks} addTask={addTask}/>
         </Route>
         <Route path="/about" component={About} />
+        <Route path="/review/:movieId" component={Review} />
         <Route component={Error} />
       </Switch>
     </>

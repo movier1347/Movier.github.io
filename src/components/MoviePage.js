@@ -4,14 +4,14 @@ import MovieCard from './MovieCard';
 import SearchIcon from '../search.svg';
 
 import '../Movie.css';
-const API_URL = `http://www.omdbapi.com?apikey=95bc6fb5`;
+const API_URL = `https://www.omdbapi.com?apikey=95bc6fb5`;
 
 const movie = {
     "Title": "The French Dispatch",
     "Year": "2021",
     "imdbID": "tt8847712",
     "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BNmQxZTNiODYtNzBhYy00MzVlLWJlN2UtNTc4YWZjMDIwMmEzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+    "Poster": "http://m.media-amazon.com/images/M/MV5BNmQxZTNiODYtNzBhYy00MzVlLWJlN2UtNTc4YWZjMDIwMmEzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
 }
 
 const MoviePage = (props) => {
@@ -25,7 +25,7 @@ const MoviePage = (props) => {
 
             const response = await fetch(`${API_URL}&s=${title}`);
             const data = await response.json();
-            
+            console.log(data);
             setMovies(data.Search);
         }
     }

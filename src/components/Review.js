@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { useLocation, useParams } from "react-router-dom";
 import ReviewForm from "./reviewForm";
+import WrittenReviews from "./WrittenReviews";
 function Review(props) {
 
 const API_URL = `https://www.omdbapi.com?apikey=95bc6fb5`;
 
 const [movieInfo, setMovieInfo] = useState({});
+const [reviews, setReviews] = useState([]);
  
 const params = useParams();
 const ID = params.movieId;
@@ -63,9 +65,14 @@ const ID = params.movieId;
       </div>
         <h2>Reviews</h2>
         <div className="review">
-          <ReviewForm></ReviewForm>
+          <ReviewForm reviews={reviews} setReviews={setReviews}></ReviewForm>
         </div>
 
+        <div className="past-reviews">
+          {reviews.map((review) =>(
+            <WrittenReviews review={review}></WrittenReviews>
+          ))}
+        </div>
     </div>
     </>
   );

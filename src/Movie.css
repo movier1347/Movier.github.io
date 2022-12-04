@@ -269,6 +269,33 @@ form{
   color: #f7a461;
 }
 
+.past-reviews{
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-container{
+  width: 65%;
+  border-radius: 15px;
+  padding: 2rem;
+  background-color: #373a41;
+  margin: 1rem;
+}
+
+.review-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  color: #f9d3b4;
+}
+
+.review-pr{
+  overflow-wrap: break-word;
+}
 
 .movie {
   width: 310px;

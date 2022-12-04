@@ -65,7 +65,9 @@ const MoviePage = (props) => {
               ? (
                 <div className="container">
                     { movies.map((movie) => (
-                        <MovieCard movie={movie} setTasks={props.setTasks} tasks={props.tasks} addTask={props.addTask}/>
+                        <MovieCard movie={movie}
+                         setTasks={props.setTasks} tasks={props.tasks}
+                          addTask={props.addTask}/>
                     ))}
                 </div>
               ) : (

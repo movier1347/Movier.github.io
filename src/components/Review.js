@@ -59,8 +59,12 @@ const ID = params.movieId;
           <p>Actors: {movieInfo.Actors}</p>
 
         </div>
-        <ReviewForm></ReviewForm>
+
       </div>
+        <h2>Reviews</h2>
+        <div className="review">
+          <ReviewForm></ReviewForm>
+        </div>
 
     </div>
     </>

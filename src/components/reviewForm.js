@@ -1,10 +1,16 @@
 const ReviewForm = (props)=>{
+
+    const handlePost = (event)=>{
+        event.preventDefault();
+    }
+
     return <form>
+            <textarea className="review-title"
+            placeholder="Title"/>
         <div className="review-form">
             <textarea className="review-input"/>
-            <button>Post</button>
         </div>
-        <div className="error-msg">error</div>
+            <button onClick={handlePost} className="review-btn">Post review</button>
     </form>
 }
 

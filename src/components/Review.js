@@ -8,7 +8,10 @@ function Review(props) {
 const API_URL = `https://www.omdbapi.com?apikey=95bc6fb5`;
 
 const [movieInfo, setMovieInfo] = useState({});
-const [reviews, setReviews] = useState([]);
+const [reviews, setReviews] = useState([{user: "Santiago Londono",
+ revTitle: "Majestic",
+  review: "This was a great movie, I'll watch again for sure.",
+   date: "2022/12/04"}]);
  
 const params = useParams();
 const ID = params.movieId;
@@ -22,6 +25,7 @@ const ID = params.movieId;
             //console.log(data);
             
             setMovieInfo(data);
+            console.log(props.user);
         }
     }
     useEffect(() =>{
@@ -65,12 +69,12 @@ const ID = params.movieId;
       </div>
         <h2 style={{marginTop:"4rem"}}>Reviews</h2>
         <div className="review">
-          <ReviewForm reviews={reviews} setReviews={setReviews}></ReviewForm>
+          <ReviewForm reviews={reviews} user={props.user} setReviews={setReviews}></ReviewForm>
         </div>
 
         <div className="past-reviews">
           {reviews.map((review) =>(
-            <WrittenReviews review={review}></WrittenReviews>
+            <WrittenReviews review={review} ></WrittenReviews>
           ))}
         </div>
     </div>

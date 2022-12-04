@@ -18,8 +18,9 @@ const MoviePage = (props) => {
 
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    
     const randomTitles = ["harry", "lord", "star", 
-    "grown", "men", "woman", "007", "iron", "america",
+    "grown", "men", "woman", "iron", "america",
      "spider", "king", "boy", "kong", "furious", "naruto", "matrix"];
     let item = randomTitles[Math.floor(Math.random()*randomTitles.length)];
    

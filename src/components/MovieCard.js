@@ -16,8 +16,6 @@ const MovieCard = (props) => {
     //console.log("You clicked " + props.movie.imdbID);
   }
 
-
-
   return (
     <div className="movie">
       <div className="AddToWatch">
@@ -39,8 +37,8 @@ const MovieCard = (props) => {
       </div>
       <div>
         <span>{props.movie.Type}</span>
-        <Link to={"/review/"+props.movie.imdbID}>
-          <h3>{props.movie.Title}</h3>
+        <Link style={{ textDecoration: 'none' }} to={"/review/"+props.movie.imdbID}>
+          <h3 className="movie-title">{props.movie.Title}</h3>
           </Link>
 
       </div>

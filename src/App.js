@@ -75,7 +75,10 @@ function App(props) {
           <MoviePage tasks={tasks} setTasks={setTasks} addTask={addTask}/>
         </Route>
         <Route path="/about" component={About} />
-        <Route path="/review/:movieId" component={Review} />
+        <Route path="/review/:movieId">
+          <Review user={user}/>
+        </Route>
+
         <Route component={Error} />
       </Switch>
     </>

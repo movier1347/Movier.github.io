@@ -7,10 +7,10 @@ const ReviewForm = (props)=>{
     const handlePost = (event)=>{
         event.preventDefault();
         let user;
-        if(!props.user){
+        if(!props.user || (Object.keys(props.user).length == 0)){
             user = "Anonymous"
         }else{
-            user = props.user;
+            user = props.user.name;
         }
         let revTitle = document.querySelector('.review-title').value;
         let rev = document.querySelector('.review-input').value;

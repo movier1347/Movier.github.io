@@ -18,6 +18,10 @@ const MoviePage = (props) => {
 
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const randomTitles = ["harry", "lord", "star", 
+    "grown", "men", "woman", "007", "iron", "america",
+     "spider", "king", "boy", "kong", "furious", "naruto", "matrix"];
+    let item = randomTitles[Math.floor(Math.random()*randomTitles.length)];
    
     const searchMovies = async(title) => { 
         if(title.length == 0){}
@@ -30,7 +34,7 @@ const MoviePage = (props) => {
         }
     }
     useEffect(() =>{
-        searchMovies('007')
+        searchMovies(item);
     },[]);
 
     const handleKeyDown = event => {

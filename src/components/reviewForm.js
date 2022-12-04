@@ -26,6 +26,8 @@ const ReviewForm = (props)=>{
             props.setReviews([...props.reviews, review]);
         }
 
+        document.querySelector('.review-title').value = "";
+        document.querySelector('.review-input').value = "";
     
     }
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { useLocation, useParams } from "react-router-dom";
+import ReviewForm from "./reviewForm";
 function Review(props) {
 
 const API_URL = `https://www.omdbapi.com?apikey=95bc6fb5`;
@@ -16,7 +17,7 @@ const ID = params.movieId;
 
             const response = await fetch(`${API_URL}&i=${id}`);
             const data = await response.json();
-            console.log(data);
+            //console.log(data);
             
             setMovieInfo(data);
         }
@@ -58,9 +59,7 @@ const ID = params.movieId;
           <p>Actors: {movieInfo.Actors}</p>
 
         </div>
-        <div className="reviews">
-
-        </div>
+        <ReviewForm></ReviewForm>
       </div>
 
     </div>

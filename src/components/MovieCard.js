@@ -12,8 +12,8 @@ const MovieCard = (props) => {
 
   function handleClick(title, poster){
     props.addTask(title, poster);
-    console.log("You clicked " + title);
-    console.log("You clicked " + props.movie.imdbID);
+    //console.log("You clicked " + title);
+    //console.log("You clicked " + props.movie.imdbID);
   }
 
 

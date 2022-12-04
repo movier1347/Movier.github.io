@@ -63,7 +63,7 @@ const ID = params.movieId;
         </div>
 
       </div>
-        <h2>Reviews</h2>
+        <h2 style={{marginTop:"4rem"}}>Reviews</h2>
         <div className="review">
           <ReviewForm reviews={reviews} setReviews={setReviews}></ReviewForm>
         </div>

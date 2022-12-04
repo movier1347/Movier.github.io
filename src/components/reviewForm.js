@@ -16,15 +16,16 @@ const ReviewForm = (props)=>{
         let rev = document.querySelector('.review-input').value;
         let date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 
-        const review = {
-            user,
-            revTitle,
-            review: rev,
-            date
+        if(revTitle.length > 0 && rev.length > 0){
+            const review = {
+                user,
+                revTitle,
+                review: rev,
+                date
+            }
+            props.setReviews([...props.reviews, review]);
         }
-        console.log(review);
-        props.setReviews([...props.reviews, review]);
-        console.log(props.reviews);
+
     
     }
 
@@ -32,10 +33,10 @@ const ReviewForm = (props)=>{
 
     return <form>
         <textarea className="review-title" id="title"
-        placeholder="Title"/>
+        placeholder="Title" required/>
         <div className="review-form">
             <textarea className="review-input" id="review"
-            placeholder="Add review"/>
+            placeholder="Add review" required={true}/>
         </div>
             <button type="submit" onClick={handlePost} 
             className="review-btn">Post review</button>

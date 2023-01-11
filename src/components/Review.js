@@ -25,7 +25,6 @@ const ID = params.movieId;
             //console.log(data);
             
             setMovieInfo(data);
-            console.log(props.user);
         }
     }
     useEffect(() =>{

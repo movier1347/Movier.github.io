@@ -8,6 +8,7 @@ import { nanoid } from "nanoid";
 import jwt_decode from "jwt-decode";
 import MoviePage from "./components/MoviePage";
 import Review from "./components/Review";
+import Navbar2 from "./components/NavBar2";
 
 function App(props) {
   const [tasks, setTasks] = useState([]);
@@ -66,7 +67,8 @@ function App(props) {
   return (
     <>
     
-      <Navbar user={user} signOut={handleSignOut}/>
+
+      <Navbar2 />
       <Switch>
         <Route path="/" exact>
           <ToWatchPage tasks={tasks} setTasks={setTasks} addTask={addTask}/>

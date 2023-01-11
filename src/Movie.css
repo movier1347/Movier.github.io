@@ -393,6 +393,11 @@ form{
   opacity: 1;
 }
 
+.menu-icon{
+  height: 4rem;
+  filter: invert(90%);
+}
+
 
 
 

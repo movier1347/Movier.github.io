@@ -477,6 +477,9 @@ input:checked + .slider:before {
   justify-content: center;
 }
 .inOutButton{
+  display: none;
+}
+.inOutButtonShow{
   display: grid;
 }
 #signInDiv{
@@ -488,26 +491,44 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 .inImg{
-  height: 4.5rem;
-  margin-right: 1rem ;
+  height: 2.5rem;
+  margin-right: .5rem;
+  border-radius: 50%;
 }
 .prof{
   display: flex;
   flex-direction: row;
   align-items: center;
   color: #d3d3d3;
+  background-color: rgb(243, 243, 243);
+  padding: .25rem;
+  border-radius: 35px;
+  transition: .5s;
+}
+.prof h4{
+  font-size: 1.7rem;
+  color: white;
 }
 #outButton{
   visibility: hidden;
-  color: #c1c1c1;
+  color: #000000;
+  font-size: 1.3rem;
+  margin-right: .2rem;
+  font-weight: 500;
+  transition: .5s;
 
 }
 
-#outButton:hover{
-  color: #ffab67;
-  animation-duration: .3s;
+.prof:hover{
+  color: #e68a3f;
+  background-color: #1b1d1f;
+  box-shadow: 2px 6px 20px #50555a;
+}
+.prof:hover #outButton{
+  color: #ffffff;
 }
 .navbar-title a{ 
   margin-left: auto;

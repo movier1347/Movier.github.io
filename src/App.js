@@ -68,7 +68,7 @@ function App(props) {
     <>
     
 
-      <Navbar2 />
+      <Navbar2 user={user} signOut={handleSignOut} />
       <Switch>
         <Route path="/" exact>
           <ToWatchPage tasks={tasks} setTasks={setTasks} addTask={addTask}/>

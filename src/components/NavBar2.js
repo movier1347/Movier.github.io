@@ -21,8 +21,7 @@ const Navbar2 = (props)=>{
       </div>
       );*/
       const links = [{name: "To Watch", link: "/"},
-      {name: "How To", link: "/"},
-      {name: "Sign In", link: "/"} ]
+      {name: "How To", link: "/about"}]
 
       const [open, setOpen] = useState(false);
       return (
@@ -39,10 +38,21 @@ const Navbar2 = (props)=>{
             </div>
             <ul className={`md:flex md:items-center text-white md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20 opacity-100 bg-neutral-900": "top-[-400px] bg-gray bg-gray"} md:opacity-100 opacity-0`}>
                 {links.map(link=>(
-                    <li key={link.name} className='md:ml-8 text-2xl md:my-0 my-9'>
-                        <a className="hover:text-black-800 duration-500">{link.name}</a>
+                    <li  key={link.name} className='md:ml-8 mx-6 text-2xl md:my-0 my-9'>
+                        <Link style={{ textDecoration: 'none', outline: "none" }} to={link.link} className="hover:text-orange-600 duration-500">{link.name}</Link>
                     </li>
                 ))}
+                <li>
+                    <div className="mx-6" id="signInDiv"></div>
+                    {props.user &&
+          <div className={(Object.keys(props.user).length > 0) ? "inOutButtonShow" : "inOutButton"}>
+            <div className="prof">
+            <img className="inImg" src={props.user.picture}/>
+            <button style={{ textDecoration: 'none', outline: "none" }} id="outButton" onClick={(e) => props.signOut(e)}>Sign Out</button>
+            </div>
+        </div>
+        }
+                </li>
             </ul>
         </div>
       </div>

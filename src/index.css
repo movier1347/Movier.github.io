@@ -61,7 +61,7 @@ input[type="text"] {
 }
 .about-page-h1 {
   padding: 7rem;
-
+  margin-top: 5rem;
   text-align: center;
 }
 .about-page-p {
@@ -241,16 +241,18 @@ body {
 
 .todoapp {
   background: #fff;
-  margin: 7rem 0 4rem 0;
   padding: 1rem;
-  position: relative;
+  margin-top: 13rem;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 1px -4px 8px 4px rgba(243, 215, 137, 0.3);
-  width: 80%;
-  max-width: 90rem;
-  margin: auto;
+  width: 90%;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
+  max-height: 75vh;
 }
 .scott-dark {
   background-color:#212426;
@@ -486,6 +488,8 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
+  float: left;
 }
 #signOutDiv{
   display: flex;
@@ -495,11 +499,12 @@ input:checked + .slider:before {
 }
 .inImg{
   height: 2.5rem;
-  margin-right: .5rem;
+  margin-left: .5rem;
   border-radius: 50%;
 }
 .prof{
   display: flex;
+  cursor: pointer;
   flex-direction: row;
   align-items: center;
   color: #d3d3d3;
@@ -515,8 +520,8 @@ input:checked + .slider:before {
 #outButton{
   visibility: hidden;
   color: #000000;
-  font-size: 1.3rem;
-  margin-right: .2rem;
+  font-size: 1.35rem;
+  margin-left: .25rem;
   font-weight: 500;
   transition: .5s;
 
@@ -529,6 +534,14 @@ input:checked + .slider:before {
 }
 .prof:hover #outButton{
   color: #ffffff;
+}
+@media(max-width:700px){
+  #signInDiv{
+    float: left;
+  }
+  .prof{
+    max-width: 10rem;
+  }
 }
 .navbar-title a{ 
   margin-left: auto;
@@ -552,17 +565,17 @@ input:checked + .slider:before {
   margin-top: 8rem;
 }
 .todoapp stack-large{
-  margin-top: 10rem;
+  margin-top: 20rem;
 }
 .movies-to-watch{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   color: #1f2123;
+
 }
 .ol-how-to > li{
-  padding: 2rem;
-  margin-top: 5rem;
+  padding: 1rem;
 }
 ol{
   margin-bottom: 17rem;

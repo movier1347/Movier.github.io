@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import ToWatchPage from "./components/ToWatchPage";
-import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Error from "./components/Error";
 import { nanoid } from "nanoid";
@@ -12,7 +11,6 @@ import Navbar2 from "./components/NavBar2";
 
 function App(props) {
   const [tasks, setTasks] = useState([]);
-  const [toWatch, setToWatch] = useState([]);
   const [user, setuser] = useState({});
 
   function handleCallBackResponse(response){

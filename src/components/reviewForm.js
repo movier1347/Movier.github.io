@@ -1,13 +1,10 @@
-import { useState } from "react";
-
 const ReviewForm = (props)=>{
 
-    const [revObj, setRevObj] = useState({});
 
     const handlePost = (event)=>{
         event.preventDefault();
         let user;
-        if(!props.user || (Object.keys(props.user).length == 0)){
+        if(!props.user || (Object.keys(props.user).length === 0)){
             user = "Anonymous"
         }else{
             user = props.user.name;

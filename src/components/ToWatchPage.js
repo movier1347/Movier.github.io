@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-
-import Form from "./Form";
 import FilterButton from "./FilterButton";
 import Todo from "./Todo";
 import DarkMode from "./DarkMode";
-import { nanoid } from "nanoid";
+
 
 function usePrevious(value) {
   const ref = useRef();
@@ -31,8 +29,7 @@ function ToWatchPage(props) {
   //const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("All");
   const [isDarkMode, setDarkMode] = useState(false);
-  const [counter, setCounter] = useState(0);
-  const [len, setLen] = useState(0);
+
 
   useEffect(() => {
   const interval = setInterval(() => {
@@ -133,9 +130,6 @@ function ToWatchPage(props) {
       setFilter={setFilter}
     />
   ));
-
-  const tasksNoun = taskList.length !== 1 ? "movies" : "movies";
-  const headingText = `${taskList.length} ${tasksNoun} to watch`;
 
   const listHeadingRef = useRef(null);
   const prevTaskLength = usePrevious(props.tasks.length);

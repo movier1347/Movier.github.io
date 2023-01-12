@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React, { useEffect, useRef, useState } from "react";
 
 function usePrevious(value) {
@@ -46,16 +45,6 @@ function Todo(props) {
     }
   }
 
-  //
-  function handleImportantClick(e) {
-    if (isImortantClicked) {
-      setIsImortantClicked(false);
-      console.log("false");
-    } else if (!isImortantClicked) {
-      setIsImortantClicked(true);
-      console.log("true");
-    }
-  }
 
   // editingTemplate is the ToDo template when editing is true
   const editingTemplate = (

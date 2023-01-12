@@ -1,13 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { nanoid } from "nanoid";
 
 
 const MovieCard = (props) => {
 
-  const [name, setName] = useState("");
-  const [reviewLink, setRevLink]= useState("");
 
 
   function handleClick(title, poster){

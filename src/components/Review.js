@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ReviewForm from "./reviewForm";
 import WrittenReviews from "./WrittenReviews";
 function Review(props) {
@@ -17,7 +16,7 @@ const params = useParams();
 const ID = params.movieId;
 
     const searchMovie = async(id) => { 
-        if(id.length == 0){}
+        if(id.length === 0){}
         else{
 
             const response = await fetch(`${API_URL}&i=${id}`);

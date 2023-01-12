@@ -5,14 +5,14 @@ import SearchIcon from '../search.svg';
 
 import '../Movie.css';
 const API_URL = `https://www.omdbapi.com?apikey=95bc6fb5`;
-
+/*
 const movie = {
     "Title": "The French Dispatch",
     "Year": "2021",
     "imdbID": "tt8847712",
     "Type": "movie",
     "Poster": "http://m.media-amazon.com/images/M/MV5BNmQxZTNiODYtNzBhYy00MzVlLWJlN2UtNTc4YWZjMDIwMmEzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
-}
+}*/
 
 const MoviePage = (props) => {
 
@@ -25,7 +25,7 @@ const MoviePage = (props) => {
     let item = randomTitles[Math.floor(Math.random()*randomTitles.length)];
    
     const searchMovies = async(title) => { 
-        if(title.length == 0){}
+        if(title.length === 0){}
         else{
 
             const response = await fetch(`${API_URL}&s=${title}`);

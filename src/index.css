@@ -499,7 +499,7 @@ input:checked + .slider:before {
 }
 .inImg{
   height: 2.5rem;
-  margin-left: .5rem;
+  margin-left: 1rem;
   border-radius: 50%;
 }
 .prof{
@@ -509,9 +509,10 @@ input:checked + .slider:before {
   align-items: center;
   color: #d3d3d3;
   background-color: rgb(243, 243, 243);
-  padding: .25rem;
+  padding: 0.25rem;
   border-radius: 35px;
   transition: .5s;
+  max-width: 10rem;
 }
 .prof h4{
   font-size: 1.7rem;
@@ -521,7 +522,7 @@ input:checked + .slider:before {
   visibility: hidden;
   color: #000000;
   font-size: 1.35rem;
-  margin-left: .25rem;
+  margin-left: .5rem;
   font-weight: 500;
   transition: .5s;
 

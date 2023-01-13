@@ -35,9 +35,10 @@ const ID = params.movieId;
 
   return (
     <>
-    <div className="container-abt">
+    <div className="container-rev">
 
       <div className="movie-info-container">
+
         <div className="poster-info">
         <img
           src={
@@ -48,6 +49,7 @@ const ID = params.movieId;
           alt={movieInfo.Title}
         />
         </div>
+
         <div className="info-container">
           <h2 className="">{movieInfo.Title}</h2>
           <div className="general">
@@ -57,12 +59,14 @@ const ID = params.movieId;
             <h4 className="runtime">{movieInfo.Runtime}</h4>
             <h4 className="year">{movieInfo.Year}</h4>
           </div>
-          <p className="plot">{movieInfo.Plot}</p>
-          <p>Genre: {movieInfo.Genre}</p>
-          <p>Director: {movieInfo.Director}</p>
-          <p>Actors: {movieInfo.Actors}</p>
-
         </div>
+
+          <div className="otherInfo extra">
+            <p className="plot">{movieInfo.Plot}</p>
+            <p>Genre: {movieInfo.Genre}</p>
+            <p>Director: {movieInfo.Director}</p>
+            <p>Actors: {movieInfo.Actors}</p>
+          </div>
 
       </div>
         <h2 style={{marginTop:"4rem"}}>Reviews</h2>

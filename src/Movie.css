@@ -153,25 +153,44 @@ body {
   flex-wrap: wrap;
   color: #f0f0f0;
 }
+.container-rev{
+  width: 100%;
+  max-width: 120rem;
+  margin-top: 10rem;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #f0f0f0;
+}
 
 .movie-info-container{
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  column-gap: 2rem;
 }
+
 .poster-info{
   grid-column-start: 1; 
   grid-column-end: 1; 
   grid-row-start: 1;
   grid-row-end: 3;
-  margin: auto;
+  float: top;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .poster-info img{
   border-radius: 25px;
 }
 .info-container{
   grid-row-start: 1;
-  grid-row-end: 3;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -187,27 +206,101 @@ body {
 .info-container h4{
   margin-top: 1.5rem;
   margin-bottom: 2rem;
-
 }
+.info-container h2{
+  font-size: 3rem;
+}
+
 .info-container .general{
   display: flex;
   justify-content: space-around;
 }
 
-.year{
-  opacity: .7;
-}
-
-.runtime{
-  opacity: .7;
-}
-
-.rating{
-  opacity: .8;
-}
 .plot{
   color: #ffffffeb;
+  opacity: .95;
+  margin-bottom: 2rem;
 }
+
+.year, .runtime, .rating{
+  opacity: .7;
+}
+@media(max-width:768px){
+  .movie-info-container{
+    margin-left: -1.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 0rem;
+  }
+  .poster-info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+  .poster-info img{
+    min-width: 8rem;
+  }
+  .info-container{
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .info-container h2{
+    font-size: 2.5rem;
+  }
+  .general{
+    display: flex;
+    flex-direction: column;
+  }
+  h2{
+    margin-top: .7rem;
+    font-size: 2.3rem;
+    color: #ffffff;
+  }
+  .general{
+    margin-top: 1.5rem;
+  }
+  .info-container h4{
+    margin: .5rem;
+    color: #eeeeee;
+    font-size: 1.3rem;
+  }
+  .year, .runtime, .rating{
+    opacity: .9;
+  
+  }
+  
+  .extra{
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+  }
+  
+  .extra p{
+    font-size: 1rem;
+  }
+
+  .plot{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    opacity: .8;
+    margin-bottom: 1rem;
+  }
+
+  .main-movier-title{
+    font-size: 2rem;
+    padding: 0 1rem 0 1rem;
+
+  }
+
+}
+
+
+
+
+
 
 .review{
   margin-top: 3rem;

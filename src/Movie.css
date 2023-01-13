@@ -247,9 +247,11 @@ body {
   .info-container{
     grid-row: 1/2;
     grid-column: 2/3;
+    margin-top: .3rem;
   }
   .info-container h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
   .general{
     display: flex;
@@ -261,12 +263,12 @@ body {
     color: #ffffff;
   }
   .general{
-    margin-top: 1.5rem;
+    margin-top: .8rem;
   }
   .info-container h4{
-    margin: .5rem;
+    margin: .2rem;
     color: #eeeeee;
-    font-size: 1.3rem;
+    font-size: .9rem;
   }
   .year, .runtime, .rating{
     opacity: .9;
@@ -294,6 +296,35 @@ body {
     padding: 0 1rem 0 1rem;
 
   }
+
+
+
+}
+
+@media(max-width:1050px) and (min-width:768px){
+  .info-container h2{
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  .info-container h4{
+    margin: .9rem;
+    color: #eeeeee;
+    font-size: 1.2rem;
+  }
+
+  .otherInfo p{
+    font-size: 1.1rem;
+  }
+  
+  .plot{
+    font-size: 1.2rem;
+    max-height: 4.5rem;
+    overflow-y: scroll;
+    margin-bottom: .5rem;
+    margin-top: -1rem;
+  }
+
 
 }
 
@@ -487,7 +518,7 @@ form{
 }
 
 .menu-icon{
-  height: 4rem;
+  height: 3rem;
   filter: invert(90%);
 }
 

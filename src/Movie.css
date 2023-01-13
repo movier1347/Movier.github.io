@@ -190,7 +190,6 @@ body {
   border-radius: 25px;
 }
 .info-container{
-  grid-row-start: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -214,6 +213,7 @@ body {
 .info-container .general{
   display: flex;
   justify-content: space-around;
+  margin-bottom: -2rem;
 }
 
 .plot{
@@ -301,7 +301,8 @@ body {
 
 }
 
-@media(max-width:1050px) and (min-width:768px){
+@media(max-width:1080px) and (min-width:768px){
+  
   .info-container h2{
     font-size: 1.7rem;
     font-weight: 700;
@@ -313,6 +314,11 @@ body {
     font-size: 1.2rem;
   }
 
+  .general{
+    margin-top: 1rem;
+    flex-direction: row;
+  }
+
   .otherInfo p{
     font-size: 1.1rem;
   }
@@ -322,11 +328,46 @@ body {
     max-height: 4.5rem;
     overflow-y: scroll;
     margin-bottom: .5rem;
-    margin-top: -1rem;
+    margin-top: 1rem;
   }
 
 
 }
+
+@media(max-width:768px) and (min-width:500px){
+  .movie-info-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+
+  .general{
+    flex-direction: row;
+  }
+  .info-container{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-top: .3rem;
+    margin-bottom: .5rem;
+  }
+
+  .poster-info{
+    grid-column-start: 1; 
+    grid-column-end: 1; 
+    grid-row-start: 1;
+    grid-row-end: 3;
+    float: top;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .extra{
+    grid-column: 2/2;
+  }
+
+}
+
 
 
 
